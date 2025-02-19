@@ -1,4 +1,4 @@
-#task,start,end,completion_frac
-Time limit, 2024-03-25,2028-03-25,0.5
-Task A, 2024-03-27,2025-01-01,1
-Task B, 2025-06-22,2027-03-28,0.4
+#task,start,end,completion_frac,desc
+Time limit, 2024-03-25,2028-03-25,0.5,Helps to see progress
+Task A, 2024-03-27,2025-01-01,1, First thing to do
+Task B, 2025-06-22,2027-03-28,0.4, Second one

@@ -8,17 +8,17 @@ import datetime as dt
 #main source:
 #https://www.datacamp.com/tutorial/how-to-make-gantt-chart-in-python-matplotlib
 
-Projecttitle="Example project"
+Projecttitle="Title of Project"
 freq_days=90
 colour="purple"
 first_colour="orange"
 
 
-df=pd.read_csv("./example.txt",header=0,names=["task","start","end","completion_frac"])
+df=pd.read_csv("../timeline.txt",header=0,names=["task","start","end","completion_frac","desc"])
 df["start"]=pd.to_datetime(df["start"])
 df["end"]=pd.to_datetime(df["end"])
 
-
+print(df)
 
 
 df.loc[0,"completion_frac"]=(dt.datetime.now()-df['start'].min()).days/((df['end'].max() - df['start'].min()).days)
@@ -49,6 +49,6 @@ ax.xaxis.grid(True, alpha=0.5)
 
 # Marking the current date on the chart
 ax.axvline(x=(dt.datetime.now()-df['start'].min()).days, color='r', linestyle='dashed')
-
+plt.subplots_adjust(left=0.2,right=0.99) 
 #plt.show()
-plt.savefig("example_chart.pdf")
+plt.savefig("../timeline.pdf")
